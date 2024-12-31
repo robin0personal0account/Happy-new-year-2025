@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year, Mahi!</title>
+    <style>
+        /* Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1b1e34, #312454);
+            overflow: hidden;
+            color: #fff;
+        }
+
+        h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            animation: fade-in 3s ease-in-out;
+        }
+
+        .fireworks {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            animation: explode 1.5s infinite ease-in-out;
+        }
+
+        @keyframes explode {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(3);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+
+        .fireworks:nth-child(1) {
+            top: 20%;
+            left: 25%;
+            animation-delay: 0.2s;
+        }
+
+        .fireworks:nth-child(2) {
+            top: 40%;
+            left: 60%;
+            animation-delay: 0.5s;
+        }
+
+        .gift-box {
+            margin-top: 20px;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            animation: bounce 2s infinite;
+        }
+
+        .icon:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .icon:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .icon:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Fireworks -->
+        <div class="fireworks"></div>
+        <div class="fireworks"></div>
+        <div class="fireworks"></div>
+
+        <!-- Heading -->
+        <h1>✨ Happy New Year, Mahi! ✨</h1>
+        <p>May this year be full of joy, love, and success!</p>
+
+        <!-- 3D Gift Box -->
+        <div class="gift-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="#ff477e">
+                <path d="M12 2c1.856 0 3.234 1.69 3.234 3.5S13.856 9 12 9H5v9h14V9h-7c-1.856 0-3.234-1.69-3.234-3.5S10.144 2 12 2zm-2 3.5c0-1.396.841-2.5 2-2.5s2 1.104 2 2.5c0 1.396-.841 2.5-2 2.5s-2-1.104-2-2.5zm0 9h4v2h-4v-2zm-6-7h3v2H4V7h3zm11 0h3v2h-3V7h3z"></path>
+            </svg>
+        </div>
+
+        <!-- Icons -->
+        <div class="icons">
+            <!-- Heart Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff4d4d">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6.5 3.5 5 5.5 5c1.54 0 3.04.99 3.57 2.36h1.87C12.46 5.99 13.96 5 15.5 5 17.5 5 19 6.5 19 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+            </svg>
+            <!-- Star Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffcc00">
+                <path d="M12 17.27L18.18 21 16.54 14.81 22 10.9l-7.19-.61L12 4 9.19 10.29 2 10.9l5.46 3.91L5.82 21z"></path>
+            </svg>
+            <!-- Party Icon -->
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#9c27b0">
+                <path d="M9 21l2.3-.61c.47-.13.9-.4 1.21-.77L20.85 9l-6.73 1.76c-.56.14-1.14.06-1.65-.2L3 3l6 15.49c.14.35.35.67.63.95l-.69 1.56c-.39.89-.08 1.94.71 2.49L9 21zm11.9-15.31l-4.54-.36c-.31-.02-.61-.15-.85-.38L12 2l.99 2.46c.19.46.55.81.98.99l4.53.36c.95.08 1.34 1.26.58 1.86L16.6 9l.5 4.69c.1.94-.83 1.66-1.69 1.19l-4.21-2.27c-.68-.37-.68-1.34 0-1.72l4.21-2.27c.86-.47 1.79.24 1.69 1.18L16.6 9l2.29-1.9c.76-.6.37-1.78-.58-1.85z"></path>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
